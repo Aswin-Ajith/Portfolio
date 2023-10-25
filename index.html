@@ -5,25 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Systrom</title>
+    <link rel="icon" href="./images/Profile-1.png">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!-- navbar -->
     <nav id="nav" class="nav">
         <ul type="none">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#instagram">Instagram</a></li>
-            <li><a href="#awards">Awards</a></li>
-            <li><a href="#connect">Connect</a></li>
+            <a href="#home"><li>Home</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#works"><li>Works</li></a>
+            <a href="#instagram"><li>Instagram</li></a>
+            <a href="#awards"><li>Awards</li></a>
+            <a href="#connect"><li>Connect</li></a>
         </ul>
     </nav>
     <br><br>
     <!-- header section -->
     <section id="home" class="home">
-        <img src="https://i.postimg.cc/0ytxCQJf/1695028325214.jpg" alt="">
+        <img src="./images/kevin bg.jpg" alt="">
+        <img id="kevinpng" src="./images/kevin png.png" alt="">
         <h1>HI, I'M KEVIN SYSTROM &nbsp</h1>
         <h3>Founder of Instagram</h3>
     </section>
@@ -104,10 +105,10 @@
         <br><br>
 
         <div class="vid">
-            <video autoplay loop controls>
+            <video autoplay muted loop controls>
                 <source src="./images/instagram.mp4" type="video/mp4">
             </video>
-            <h1>Your Favourite Way of Socializing</h1>
+            <h1 id="fav">Your Favourite Way of Socializing</h1>
         </div>
         <div class="row">
             <div class="col">
@@ -178,7 +179,7 @@
                 <img width="28px" height="28px" src="./images/send.png" alt="">
             </div>
             <div class="form">
-                <input type="text" placeholder="Enter your email address">
+                <input type="email" placeholder="Enter your email address">
                 <textarea name="" id="" cols="30" rows="10" placeholder="Enter the message"></textarea>
                 <button>Submit</button>
             </div>

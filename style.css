@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Lexend+Deca&family=Macondo&family=Poppins:wght@500&family=REM:wght@500&family=Righteous&family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Indie+Flower&family=Lexend+Deca&family=Macondo&family=Poppins:wght@500&family=REM:wght@500&family=Righteous&family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Indie+Flower&family=Kaushan+Script&family=Lexend+Deca&family=Macondo&family=Poppins:wght@500&family=REM:wght@500&family=Righteous&family=Share+Tech+Mono&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+
 *{
     font-family: 'Lexend Deca', sans-serif;
 }
@@ -37,10 +45,10 @@ body{
     padding: 10px;
     align-items: center;
     justify-content: center;
-}
-.nav ul li a{
     text-decoration: none;
     color: white;
+}
+.nav ul li a{
     margin-top: 30px;
 }
 .home{
@@ -53,6 +61,20 @@ body{
     position: absolute;
     top: 0px;
 }
+#kevinpng{
+    animation-name: slide-right;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(1, 3, 0.5, 0.1,0.1,0.01);
+}
+
+@keyframes slide-right{
+    from{
+        margin-left: 100px;
+    }
+    to{
+        margin-left: -60px;
+    }
+}
 .home h1{
     position: absolute;
     font-family: 'Lexend Deca', sans-serif;
@@ -64,14 +86,49 @@ body{
     width: 1850px;
     font-size: 64px;
     text-shadow: 3px 3px rgba(0, 0, 0, 0.401);
-    background-color: rgba(25, 30, 49, 0.437);
+    background-color: rgb(193, 185, 171);
+    animation-name: slide-left;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    z-index: 4;
 }
+@keyframes slide-left{
+    from{
+        left: -1500px;
+        opacity: 0;
+    }
+    to{
+        left: -900px;
+        opacity: 1;
+    }
+}
+
 .home h3{
     position: absolute;
     font-family: 'Indie Flower', cursive;
-    top: 290px;
-    left: 450px;
+    font-size: 24px;
+    top: 295px;
+    left: 430px;
     color: rgb(40, 40, 40);
+    z-index: 3;
+    
+    animation-name: slide-down;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes slide-down{
+    0%{
+        opacity: 0;
+    }
+    
+    70%{
+        top: 250px;
+        opacity: 0;
+    }
+    100%{
+        top: 295px;
+        opacity: 1;
+    }
 }
 .about h2{
     color: white;
@@ -89,10 +146,10 @@ body{
     width: 730px;
     height: 450px;
     position: absolute;
-    border: 5px solid rgba(40, 40, 40, 0.423);
+    /* border: 5px solid #2828286c; */
     left: 50%;
     font-size: 28px;
-    text-align: center;
+    text-align: justify;
     top: 140px;
 }
 .about img{
@@ -107,10 +164,14 @@ body{
     justify-content: space-evenly;
     border-bottom: 2px solid white;
 }
+
 .icons img{
     padding-left: 30px;
     margin-bottom: 90px;
+    animation-name: slie-up;
+    animation-timing-function: ease-out;
 }
+
 #kevin{
     width: 103%;
     left: -30px;
@@ -122,10 +183,10 @@ body{
     width: 880px;
     height: 400px;
     position: absolute;
-    border: 5px solid rgba(40, 40, 40, 0.423);
+    /* border: 5px solid rgba(40, 40, 40, 0.423); */
     left: 10%;
     font-size: 28px;
-    text-align: center;
+    text-align: justify;
     top: 740px;
 }
 .about .container1 p{
@@ -147,9 +208,6 @@ body{
     color: white;
     text-align: center;
 }
-
-
-
 .works .images{
     display: flex;
     justify-content: center;
@@ -280,7 +338,7 @@ body{
 .awards .row .col2{
     color: white;
     margin-bottom: 70px;
-    margin-left: 100px;
+    margin-left: 0px;
     display: flex;
     align-items: center;
 }
@@ -375,4 +433,237 @@ body{
 .footer ul li a{
     text-decoration: none;
     color: rgb(191, 189, 189);
+}
+
+@media screen and (max-width: 450px)
+{
+    body{
+        overflow-x: hidden;
+    }
+    .nav{
+        position: sticky;
+        display: fixed;
+    }
+.nav ul{
+    overflow: auto;
+    margin-right: 0%;
+    width:100%;
+    height: 40px;
+    border-radius: 0%;
+    
+}
+.nav ul li{
+    margin-left: -7px;
+    font-size: 12px;
+}
+.nav ul li a{
+    font-size: 12px;
+}
+
+.home img{
+    margin-top: 40px;
+    width: 100%;
+    background-size: cover;
+    animation-name: none;
+}
+#kevinpng{
+    left: 85px;
+}
+.home h1{
+    font-size: 18px;
+    left: -40px;
+    width: 300px;
+    top: 85px;
+    animation-name: none;
+}
+.home h3{
+    font-size: 10px;
+    left: 95px;
+    top: 113px;
+    animation-name: none;
+
+}
+#kevinpng{
+    animation-name: none;
+}
+.icons{
+    margin-top: -420px;
+}
+.icons img{
+    transform: scale(0.3);
+    margin-bottom: 10px;
+    margin-left:-10px;
+    margin-right: -10px;
+}
+.about{
+    margin-top: -30px;
+}
+.about h2{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.about .container p{
+    margin: 5px;
+}
+.about .container{
+    left: 47%;
+    width: 52%;
+    font-size: 8px;
+    border: 2px solid #28282882;
+    height: 125px;
+    top: 53px;
+}
+.about .container1{
+    left: 3%;
+    width: 70%;
+    font-size: 8px;
+    border: 2px solid #28282882;
+    height: 100px;
+    top: 216px;
+}
+.about .container1 p{
+    margin: 5px;
+    padding-top: 0px;
+}
+.about img{
+    margin-left: -10px;
+    width: 104%;
+    background-size: cover;
+}
+#kevin{
+    width: 104%;
+    margin-bottom: -30px;
+}
+.works h2{
+    margin-top: -25px;
+    font-size: 16px;
+}
+.works .images{
+    flex-direction: column;
+}
+.works .images .img{
+
+    width: 80%;
+    height: 300px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.works .images .img img{
+    border-radius: 10px;
+}
+.works .images .content{
+    border-radius: 10px;
+}
+.instagram .heading{
+    font-size: 16px;
+}
+.vid video{
+    margin-top: -20px ;
+    width: 90%;
+}
+#fav{
+    font-size: 18px;
+}
+.row{
+    flex-direction: column;
+}
+.row .col iframe{
+    width: 250px;
+    height: 140px;
+    margin-bottom: 30px;
+}
+.row .col h3{
+    font-size: 12px;
+}
+.awards h2{
+    font-size: 16px;
+}
+.awards .row .col2{
+    margin-left: 0px;
+    flex-direction: column;
+}
+.awards .row .col1 img{
+    width: auto;
+    height: 180px;
+}
+.awards .row .col2 img{
+    width: auto;
+    height: 180px;
+    position: absolute;
+}
+.awards .row .col2 .text{
+    font-size: 8px;
+    margin-left: 45px;
+    margin-top: 190px;
+    margin-bottom: -50px;
+}
+.awards .row .col1 .text{
+    font-size: 8px;
+    margin-left:130px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: -40px;
+}
+.awards .row .col1{
+    flex-direction: column;
+    margin-right: 0px;
+
+}
+.cnct{
+    flex-direction: column;
+}
+.cnct h2{
+    font-size: 14px;
+    margin-bottom: -20px;
+    margin-top: -30px;
+}
+.cnct img{
+    opacity: 0;
+}
+.connect .row .col .text{
+    font-size: 12px;
+    margin-top: -20px;
+}
+.or{
+    font-size: 15px;
+    margin-top: -15px;
+}
+.snd{
+    flex-direction: column;
+}
+.snd h2{
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+.snd img{
+    opacity: 0;
+}
+.connect .form input{
+    height: 10px;
+    font-size: 10px;
+    width: 70%;
+}
+.connect .form textarea{
+    height: 60px;
+    font-size: 10px;
+    width: 70%;
+}
+.connect .form button{
+    font-size: 10px;
+    width: 60px;
+    height: 25px;
+    margin-top: 20px;
+}
+
+.footer{
+    font-size: 8px;
+    height: 30px;
+    width: 100%;
+    margin-top: -50px;
+}
+.footer ul li{
+    width: 100px;
+    margin: 10px;
+}
 }
